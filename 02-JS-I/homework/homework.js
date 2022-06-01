@@ -114,7 +114,7 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num / 2 === 0) {
+  if (num % 2 === 0) {
     return true;
   } else {
     return false;
@@ -125,7 +125,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num / 2 > 0) {
+  if (num % 2 > 0) {
     return true;
   } else {
     return false;
@@ -154,19 +154,19 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  
+  return math.round(num);
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  
+  return math.ceil (num);
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return math.random;
+  return math.random (0, 1);
   
 }
 
@@ -180,7 +180,6 @@ function esPositivo(numero) {
     } else {
     return "es negativo";
     }
-  
 }
 
 function agregarSimboloExclamacion(str) {
@@ -202,7 +201,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola " + nombre + ":)"
+  return "Hola " + nombre + "😊"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -222,7 +221,7 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  return base * altura;
+  return (base * altura) / 2;
 }
 
 
@@ -241,11 +240,11 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   if (letra.length > 1)
-  return "Ingrese una sola letra";
-if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+  return "Dato incorrecto";
+  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
   return "Es vocal";
 } else {
-  return "Es consonante"
+  return "Dato incorrecto";
 }
 }
 
